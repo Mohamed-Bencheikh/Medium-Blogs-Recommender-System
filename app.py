@@ -13,7 +13,8 @@ def get_search_results(query):
             st.write(f"**URL:** [open link]({article['url']})")
 
 def get_chat_response(query):
-    st.chat_message(name='human', query)
+    with st.chat_message(name='human'):    
+        st.write(query)
     with st.chat_message(name='bot'):
         with st.spinner("Thinking..."):
             response = get_response(query).text
