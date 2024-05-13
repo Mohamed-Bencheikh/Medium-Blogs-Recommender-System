@@ -13,7 +13,7 @@ def get_search_results(query):
             st.write(f"**URL:** [open link]({article['url']})")
 
 def get_chat_response(query):
-    st.chat_message(name='human', value=query)
+    st.chat_message(name='human', query)
     with st.chat_message(name='bot'):
         with st.spinner("Thinking..."):
             response = get_response(query).text
@@ -21,7 +21,7 @@ def get_chat_response(query):
 
 st.set_page_config(page_title="Blog Recommendation App", page_icon='media/logo.png')
 
-st.title("Blog Recommendation App")
+st.title("Blogs Recommender")
 cols = st.columns([.7, 3])
 with cols[0]:
     search_or_chat = st.selectbox("Select an option:", ["Search", "Chat"], label_visibility="collapsed")
