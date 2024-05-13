@@ -19,7 +19,7 @@ def get_chat_response(query):
             response = get_response(query).text
             st.markdown(response, unsafe_allow_html=True)
 
-st.set_page_config(page_title="Blog Recommendation App")
+st.set_page_config(page_title="Blog Recommendation App", page_icon='media/logo.png')
 
 st.title("Blog Recommendation App")
 cols = st.columns([.7, 3])
